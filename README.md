@@ -56,7 +56,7 @@ Le typage des tokens peut être utile car le tokenizateur peut, avec une grammai
 | Gestionnaire des packets     | PIP                |
 | Gestionnaire d'environnement | VirtualEnvironment |
 | Environnement                | Windows 7/10       |
-| Librairie                    | PyYaml             |
+| Librairie                    | PyYaml, re         |
 
 ---
 
