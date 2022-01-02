@@ -1,0 +1,20 @@
+variables:
+  cur: ''
+  last: ''
+  tab: '\t'
+  open: '('
+  close: ')'
+main :
+  - match: '^{{cur}}{{tab}}'
+    save: [;open, "open"]
+    ignore: 1
+    var:
+      last: ;cur
+      cur: ;_
+  - match: '(^{{tab}}*)|\Z'
+    if: ['<', ;_, ;cur]
+    save: [;close, "close"]
+    ignore: 1
+    var: {cur: ;cur:1}
+  - match: '\d+'
+    save: char

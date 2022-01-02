@@ -1,0 +1,15 @@
+variables:
+  open: '\('
+  close: '\)'
+main:
+  - match: ;open
+    save: 'open'
+    begin: # Ceci est un module non nommé
+    - match: ;close
+      save: 'close'
+      end: 1
+    - include: 'main'
+  - match: '[^()]+' # pour éviter de prendre des parenthèses involontairement
+    save: 'other'
+  - match: ;close
+    error: il y a une parenthèse de fermeture en trop
