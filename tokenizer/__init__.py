@@ -1,12 +1,12 @@
 """
     Module d'analyse syntaxique et de grammaire tokenization
     @name: tokenizer
-    @version: 1.2
+    @version: 1.3
     @date: 01/01/2022
     @authors: Manolo Sardo
     @datas:
         name {str}["tokenizer"]
-        version {float}[1.0]
+        version {float}[1.3]
         author {str}["Manolo Sardo"]
     @imports:
         yaml
@@ -19,7 +19,7 @@
 """
 
 name    = "tokenizer"
-version = 1.2
+version = 1.3
 author  = "Manolo Sardo"
 
 import yaml
