@@ -62,7 +62,7 @@ Le typage des tokens peut être utile car le tokenizateur peut, avec une grammai
 
 ## Installation
 
-`pip install -e git+https://github.com/Manolo-dev/tokenizer.git`
+`pip install -e git+https://github.com/Manolo-dev/tokenizer.git#egg=tokenizer`
 
 ---
 
