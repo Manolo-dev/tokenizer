@@ -3,7 +3,7 @@ from setuptools import setup, find_packages
 # crée le package et définit ses métadonnées
 setup(
     name             = 'tokenizer',
-    version          = '1.2',
+    version          = '1.3',
     plateformes      = 'Windows',
     packages         = find_packages(),
     packages_dir     =  {'' : 'tokenizer'},
