@@ -9,7 +9,7 @@ setup(
     packages_dir     =  {'' : 'tokenizer'},
     author           = 'sergeLabo',
     description      = 'Python tokenizer',
-    #download_url     = 'https://github.com/sergeLabo/pymultilame',
+    download_url     = 'https://github.com/Manolo-dev/tokenizer',
     keywords         =  ['token', 'tokenization', 'language', 'comprehension'],
     long_description = open('README.md').read(),
     classifiers      =  [

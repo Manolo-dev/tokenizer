@@ -52,11 +52,17 @@ Le typage des tokens peut être utile car le tokenizateur peut, avec une grammai
 | technologie                  | outil              |
 |:---------------------------- | ------------------:|
 | Langage                      | Python             |
-| Version                      | 3.10               |
+| Version du langage           | 3.10               |
 | Gestionnaire des packets     | PIP                |
 | Gestionnaire d'environnement | VirtualEnvironment |
 | Environnement                | Windows 7/10       |
 | Librairie                    | PyYaml, re         |
+
+---
+
+## Installation
+
+`pip install -e git+https://github.com/Manolo-dev/tokenizer.git`
 
 ---
 

@@ -21,7 +21,11 @@
                 str(self, tab):
                 __repr__(self):
                 __str__(self):
+    @imports:
+        yaml
 """
+
+import yaml
 
 class Token(list) :
     """
@@ -32,33 +36,13 @@ class Token(list) :
             {**list}
             __init__(self, valu, typp):
                 Crée le token
-                @params:
-                    self {object}
-                    valu {str}[None] la valeur du token
-                    typp {str}[None] le type du token
-                @returns:
-                    self {object}
             set_value(self, valu):
                 Définit la valeur du token
-                @params:
-                    self {object}
-                    valu {str}[None] la valeur du token
-                @returns:
-                    self {object}
             set_type(self, typp):
                 Définit le type du token
-                @params:
-                    self {object}
-                    typp {str}[None] le type du token
-                @returns:
-                    self {object}
             __repr__(self): __str__
             __str__(self):
                 Renvoie la chaîne de caractère associé au token
-                @params:
-                    self {object}
-                @returns:
-                    {str}
     """
 
     def __init__(self:object, valu:str = None, typp:str = None) -> object :
@@ -131,18 +115,9 @@ class Logs(list) :
             str(self, tab):
                 Renvoie la chaîne de caractère associé à la liste de tokens
                 et fait de la récursivité pour les sous liste de tokens
-                @params:
-                    self {object}
-                    tab {str}[""] tabulation courante, augmente pour chaque sous ^liste
-                @returns:
-                    result {str}
             __repr__(self): __str__
             __str__(self):
                 Renvoie la chaîne de caractère associé à la liste de tokens
-                @params:
-                    self {object}
-                @returns:
-                    {str}
     """
 
     def str(self:object, tab:str = "") -> str :
@@ -185,3 +160,29 @@ class Logs(list) :
         """
 
         return "---\n" + self.str()
+
+class SafeLineLoader(yaml.loader.SafeLoader) :
+    """
+        Loader de fichier yaml, permet de donner la line de chaque module
+        @bases: yaml.loader.SafeLoader
+        @attributes:
+        @method :
+            {**yaml.loader.SafeLoader}
+            construct_mapping(self, node, deep):
+    """
+
+    def construct_mapping(self:object, node:object, deep:bool = False) :
+        """
+            Charge un fichier yaml en implémentant les lignes
+            @params:
+                self {object}
+                node {object}
+                deep {bool}[False]
+            @returns:
+                mapping {dict}
+        """
+
+        mapping = super(SafeLineLoader, self).construct_mapping(node, deep = deep)
+        # ajoute 1 pour que la numérotation des lignes commence à 1
+        mapping['__line__'] = node.start_mark.line + 1
+        return mapping

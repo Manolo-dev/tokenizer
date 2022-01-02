@@ -26,7 +26,7 @@ def format(string:str, variables:dict) -> str :
     begin = re.search(r"\{\{", string)
     if begin != None :
         # vérifie si la syntax d'appel de variable est correcte
-        end = re.search(r"\}\}", string)
+        end = re.compile(r"\}\}").search(string, begin.span()[0])
         if end == None :
             ERROR(6)
         # trouve le nom de la variable
@@ -60,12 +60,12 @@ def adjust(string:str, variables:dict) -> str :
 
     # si l'élément est une variable on la remplace par sa valeur
     # ou si la variable n'existe pas on renvoie une erreur
-    if string[0] == ';' if len(string) > 0 else False :
+    if len(string) > 0 and string[0] == ';' :
         # regarde si la chaîne est cropé, fait attention à ne pas l'inclure dans le nom de variable
         crop_pos = string.find(':')
         if crop_pos != -1 :
             # vérifie si le crop est échappé ou non
-            if string[crop_pos - 1] == "\\" if crop_pos > 0 else False :
+            if crop_pos > 0 and string[crop_pos - 1] == "\\" :
                 crop_pos = -1
         if crop_pos != -1 :
             var = string[1:crop_pos]
@@ -85,7 +85,7 @@ def adjust(string:str, variables:dict) -> str :
     crop_pos = string.find(':')
     if crop_pos != -1 :
         # vérifie si le crop est échappé ou non
-        if string[crop_pos - 1] == "\\" if crop_pos > 0 else False :
+        if crop_pos > 0 and string[crop_pos - 1] == "\\" :
             crop_pos = -1
     if crop_pos != -1 :
         crop = string[crop_pos + 1:]

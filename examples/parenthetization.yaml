@@ -9,7 +9,7 @@ main:
       save: 'close'
       end: 1
     - include: 'main'
-  - match: '[^()]+' # pour éviter de prendre des parenthèses involontairement
+  - match: '[^()\n]+' # pour éviter de prendre des parenthèses involontairement
     save: 'other'
   - match: ;close
     error: il y a une parenthèse de fermeture en trop
