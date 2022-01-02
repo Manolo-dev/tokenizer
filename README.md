@@ -1,6 +1,6 @@
 # Tokenizer
 
-Le Tokenizer est un analyseur lexicale, il permet, comme Flex and Yacc par exemple, de tokenizer du code, c'est à dire transformer du code en liste tokens. En l'occurence, contrairement à Flex and Yacc, la liste de token sera hiérarchisée et les tokens peuvent .
+Le Tokenizer est un analyseur lexicale, il permet, comme Flex and Yacc par exemple, de tokenizer du code, c'est à dire transformer du code en liste tokens. En l'occurence, contrairement à Flex and Yacc, la liste de token sera hiérarchisée et les tokens sont typés.
 
 ### Qu'est-ce que c'est quoi dis donc un token ?
 
