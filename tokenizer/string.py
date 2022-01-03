@@ -6,11 +6,11 @@
         to_str(tokens, char, typp):
     @imports:
         re
-        Tokenizer.error
+        tokenizer.error
 """
 
 import re
-from   Tokenizer.error import *
+from   tokenizer.error import *
 
 def format(string:str, variables:dict) -> str :
     """
