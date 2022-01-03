@@ -19,17 +19,17 @@
         yaml
         re
         sys
-        Tokenizer.classes
-        Tokenizer.error
-        Tokenizer.string
+        tokenizer.classes
+        tokenizer.error
+        tokenizer.string
 """
 
 import yaml
 import re
 import sys
-from   Tokenizer.classes import *
-from   Tokenizer.error   import *
-from   Tokenizer.string  import *
+from   tokenizer.classes import *
+from   tokenizer.error   import *
+from   tokenizer.string  import *
 
 _code      = ""
 _variables = {}
