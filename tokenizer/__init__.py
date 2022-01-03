@@ -25,7 +25,7 @@ author  = "Manolo Sardo"
 import yaml
 import re
 import sys
-from   Tokenizer.classes import *
-from   Tokenizer.error   import *
-from   Tokenizer.string  import *
-from   Tokenizer.main    import *
+from   tokenizer.classes import *
+from   tokenizer.error   import *
+from   tokenizer.string  import *
+from   tokenizer.main    import *
