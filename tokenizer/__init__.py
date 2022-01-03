@@ -12,10 +12,10 @@
         yaml
         re
         sys
-        Tokenizer.classes
-        Tokenizer.error
-        Tokenizer.string
-        Tokenizer.main
+        tokenizer.classes
+        tokenizer.error
+        tokenizer.string
+        tokenizer.main
 """
 
 name    = "tokenizer"
