@@ -7,7 +7,7 @@ setup(
     plateformes      = 'Windows',
     packages         = find_packages(),
     packages_dir     =  {'' : 'tokenizer'},
-    author           = 'sergeLabo',
+    author           = 'Manolo Sardo',
     description      = 'Python tokenizer',
     download_url     = 'https://github.com/Manolo-dev/tokenizer',
     keywords         =  ['token', 'tokenization', 'language', 'comprehension'],
