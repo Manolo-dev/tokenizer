@@ -58,9 +58,13 @@ def adjust(string:str, variables:dict) -> str :
             string {str} la chaine de caractère après remplacement des variables par leurs valeurs
     """
 
+    # retourne l'élément s'il est vide
+    if len(string) == 0 :
+        return string
+
     # si l'élément est une variable on la remplace par sa valeur
     # ou si la variable n'existe pas on renvoie une erreur
-    if len(string) > 0 and string[0] == ';' :
+    if string[0] == ';' :
         # regarde si la chaîne est cropé, fait attention à ne pas l'inclure dans le nom de variable
         crop_pos = string.find(':')
         if crop_pos != -1 :
