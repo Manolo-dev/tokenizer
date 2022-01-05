@@ -6,13 +6,13 @@ setup(
     version          = '1.3',
     plateformes      = 'Windows',
     packages         = find_packages(),
-    packages_dir     =  {'' : 'tokenizer'},
+    packages_dir     = {'' : 'tokenizer'},
     author           = 'Manolo Sardo',
     description      = 'Python tokenizer',
     download_url     = 'https://github.com/Manolo-dev/tokenizer',
-    keywords         =  ['token', 'tokenization', 'language', 'comprehension'],
+    keywords         = ['token', 'tokenization', 'language', 'comprehension'],
     long_description = open('README.md').read(),
-    classifiers      =  [
+    classifiers      = [
         'Programming Language :: Python :: 3',
         'Intended Audience :: Developers',
         'Operating System :: Windows',
